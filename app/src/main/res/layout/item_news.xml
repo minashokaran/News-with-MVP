@@ -1,0 +1,68 @@
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frame_image_news"
+        android:layout_width="120dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:id="@+id/iv_image_container" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_video_container"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_play_circle_filled_white_24dp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@id/frame_image_news"
+        android:layout_toEndOf="@id/frame_image_news"
+        android:maxLines="3"
+        android:minLines="3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_news_title"
+        android:layout_toEndOf="@id/frame_image_news">
+
+        <ImageView
+            android:id="@+id/iv_news_dateIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_date_range_black_24dp" />
+
+        <TextView
+            android:id="@+id/tv_news_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_news_dateIcon"
+            android:textColor="" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
