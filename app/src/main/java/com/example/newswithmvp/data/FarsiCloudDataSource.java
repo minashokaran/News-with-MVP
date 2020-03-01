@@ -5,20 +5,26 @@ import java.util.List;
 import io.reactivex.Flowable;
 import io.reactivex.Single;
 
-public class LocalDataSource implements NewsDataSource {
+public class FarsiCloudDataSource extends CloudDataSource {
+    private FarsiApiService farsiApiService;
+
+    public FarsiCloudDataSource(){
+        super();
+        farsiApiService=retrofit.create(FarsiApiService.class);
+    }
     @Override
     public Flowable<List<News>> getNews() {
-        return null;
+        return farsiApiService.getNews();
     }
 
     @Override
     public Single<List<News>> getVideos() {
-        return null;
+        return farsiApiService.getVideoNews();
     }
 
     @Override
     public Single<List<Banner>> getBanner() {
-        return null;
+        return farsiApiService.getBanners();
     }
 
     @Override
@@ -28,6 +34,11 @@ public class LocalDataSource implements NewsDataSource {
 
     @Override
     public Single<List<News>> getBookmarkedNews() {
+        return null;
+    }
+
+    @Override
+    public Single<List<News>> search(String keyword) {
         return null;
     }
 }

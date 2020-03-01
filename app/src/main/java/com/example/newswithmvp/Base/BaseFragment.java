@@ -24,6 +24,10 @@ public abstract class BaseFragment extends Fragment {
         return rootView;
     }
 
+    public BaseActivity getBaseActivity() {
+        return (BaseActivity) getActivity();
+    }
+
     public abstract int getRecLayout();
 
     public abstract void setupViews();

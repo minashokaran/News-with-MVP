@@ -23,40 +23,40 @@ public class NewsCategoryAdapter extends RecyclerView.Adapter<NewsCategoryAdapte
         newsCategories[0] = topStories;
         topStories.setId(0);
         topStories.setTitle(context.getString(R.string.category_topStories));
-        topStories.setIcon(context.getDrawable(R.drawable.));
+        topStories.setIcon(R.drawable.ic_topstories_black_24dp);
 
 
         NewsCategory world = new NewsCategory();
         newsCategories[1] = world;
         world.setId(1);
         world.setTitle(context.getString(R.string.category_World));
-        world.setIcon(context.getDrawable());
+        world.setIcon(R.drawable.ic_world_black_24dp);
 
 
         NewsCategory business = new NewsCategory();
         newsCategories[2] = business;
         business.setId(2);
-        business.setTitle(context.getString());
-        business.setIcon(context.getDrawable());
+        business.setTitle(context.getString(R.string.category_business));
+        business.setIcon(R.drawable.ic_business_black_24dp);
 
         NewsCategory iran = new NewsCategory();
         newsCategories[3] = iran;
         iran.setId(3);
-        iran.setTitle(context.getString());
-        iran.setIcon(context.getDrawable());
+        iran.setTitle(context.getString(R.string.category_iran));
+        iran.setIcon(R.drawable.ic_iran_black_24dp);
 
         NewsCategory health = new NewsCategory();
         newsCategories[4] = health;
         health.setId(4);
-        health.setTitle(context.getString());
-        health.setIcon(context.getDrawable());
+        health.setTitle(context.getString(R.string.category_health));
+        health.setIcon(R.drawable.ic_health_black_24dp);
 
 
         NewsCategory technology = new NewsCategory();
         newsCategories[5] = technology;
         technology.setId(5);
-        technology.setTitle(context.getString());
-        technology.setIcon(context.getString());
+        technology.setTitle(context.getString(R.string.category_technology));
+        technology.setIcon(R.drawable.ic_technology_black_24dp);
 
 
     }
@@ -83,8 +83,8 @@ public class NewsCategoryAdapter extends RecyclerView.Adapter<NewsCategoryAdapte
 
         public NewsCategoryViewHolder(@NonNull View itemView) {
             super(itemView);
-            iconImageView = itemView.findViewById();
-            titleTextView = itemView.findViewById();
+            iconImageView = itemView.findViewById(R.id.iv_cat_icon);
+            titleTextView = itemView.findViewById(R.id.tv_cat_title);
         }
 
         public void bindNewsCategory(NewsCategory newsCategory) {
